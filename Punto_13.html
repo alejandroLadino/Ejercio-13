@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Point 13</title>
+    <meta name="author" content="Dylan Arias And Ginna Tangarife">
+    <meta name="keywords" content="html, fundaments, react, babel">
+    <meta name="description" content="Point 13">
+    </head>
+  <body>
+    <div id="root">
+    </div>
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+    const datos_generales = {
+      title_1: "Titulo en encabezado",
+      paragraph_1: "Este es un parrafo",
+      paragraph_2: "Tu Navegador no soporta este elemento de video",
+      paragraph_3: "Derechos Reservados (Pie)",
+    }
+
+    const title_1 = <h1>{datos_generales.title_1}</h1>;
+    const parrafo_1 = <p>{datos_generales.paragraph_1}</p>;
+    const video = <video width='320' height='240' controls poster='video/imagen.jpg'>
+      <source src='./sources/videos/Aprende_HTML.mp4' type='video/mp4'/>
+        {datos_generales.paragraph_2}
+      </video>;
+    const parrafo_2 = <p>{datos_generales.paragraph_3}</p>;
+
+    const element = (
+      <div>
+        {title_1}
+        {parrafo_1}
+        {video}
+        {parrafo_2}
+      </div>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Point 1</title>
+    <meta name="author" content="Dylan Arias And Ginna Tangarife">
+    <meta name="keywords" content="html, fundaments, react, label">
+    <meta name="description" content="Point 1">
+    </head>
+  <body>
+    <div id="root">
+    </div>
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+    const datos_generales = {
+      title_1: "Plato de la semana",
+      title_2: "Berenjenas fritas",
+      paragraph_1: "Comensales: 4 personas",
+      paragraph_2: "Tiempo de reparación: 10 minutos",
+      paragraph_3: "Tiempo de cocción: 12 minutos",
+    }
+
+    const ingredientes = {
+      paragraph_1: "Ingredientes",
+      paragraph_2: "4 berenjenas.",
+      paragraph_3: "Sal.",
+      paragraph_4: "Pimienta.",
+      paragraph_5: "4 cucharadas de harina y aceite.",
+    }
+
+    const preparacion = {
+      paragraph_1: "Preparación:",
+      paragraph_2: "Lavar las berenjenas.",
+      paragraph_3: "Cortarlas en rodajas.",
+      paragraph_4: "Espolvorearlas con sal.",
+      paragraph_5: "Dejar que suelten el agua durante 30 minutos.",
+      paragraph_6: "Enharizarlas, ponerlas a freir durante 5 minutos en aceite bien caliente.",
+    }
+
+    const title_1 = <h1>{datos_generales.title_1}</h1>;
+    const subtitle_1 = <h2>{datos_generales.title_2}</h2>;
+    const paragraph_datos_generales = <p>{datos_generales.paragraph_1}<br/><br/>{datos_generales.paragraph_2}
+      <br/><br/>{datos_generales.paragraph_3}</p>;
+    const paragraph_ingredientes = <p>{ingredientes.paragraph_1}<br/><br/>{ingredientes.paragraph_2}
+      <br/>{ingredientes.paragraph_3}<br/>{ingredientes.paragraph_4}<br/>{ingredientes.paragraph_5}</p>;
+    const paragraph_preparacion = <p>{preparacion.paragraph_1}<br/><br/>{preparacion.paragraph_2}
+      <br/>{preparacion.paragraph_3}<br/>{preparacion.paragraph_4}<br/>{preparacion.paragraph_5}
+      <br/>{preparacion.paragraph_6}</p>;
+
+    const element = (
+      <div>
+        {title_1}
+        {subtitle_1}
+        {paragraph_datos_generales}
+        {paragraph_ingredientes}
+        {paragraph_preparacion}
+      </div>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+    </script>
+  </body>
+</html>

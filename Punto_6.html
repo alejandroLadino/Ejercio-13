@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>Point 6</title>
+        <meta name="author" content="Dylan Arias And Ginna Tangarife">
+        <meta name="keywords" content="html, fundaments, react, label">
+        <meta name="description" content="Point 6">
+        </head>
+      <body>
+        <div id="root">
+        </div>
+    
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+    
+        const datos_generales = {
+          title_1: "El Noticiero Next University",
+          title_2: "Programas de Tecnología",
+          title_3:"Desarrollador Web",
+          paragraph_1: "Next University",
+          paragraph_2: "lanza su programa de formación",
+          paragraph_3: '"Desarrollador Web"',
+          paragraph_4:" con la finalidad de capacitar a personas en las tendencias actuales sobre tecnologías,en el caso de desarrollo web, se basa temas relacionados a la implementación de Front-End con tecnologías y Frameworks, tales como: ",
+          paragraph_5:" HTML5, CSS, JavaScript, Boostrap, entre otros.",
+        }
+
+        const android = {
+          title_1: "Android",
+          paragraph_1: "En",
+          paragraph_2: " Next University",
+          paragraph_3: " te ofrecemos el programa",
+          paragraph_4: " Android",
+          paragraph_5: " que te da las herramientas necesarias para diseñar e implementar aplicaciones Android para dispositivos móviles, partiendo de un conocimiento básico de",
+          paragraph_6: " Java,",
+          paragraph_7: " utilizando el entorno de desarrollo ",
+          paragraph_8: " Android Studio.",
+          paragraph_9: " Aprenderás los aspectos fundamentales para crear aplicaciones Android interactivas, dinámicas y exitosas utilizando técnicas para el manejo de los recursos, datos, segundos planos, localización, sensores, animaciones, gráficos, mutimedia y monetización.",
+        }
+
+        const program_nego = {
+          title_1: "Programa de Negocio",
+          title_2: "Mercadeo Digital",
+          paragraph_1: "Next University",
+          paragraph_2: " coloca a tu disposición de programa de",
+          paragraph_3: '"Mercadeo Digital".',
+          paragraph_4: " Sabias que... Mercadeo Digital o Digital Marketing es mucho más que hacer y publicar anuncios. Se trata del consumidor y la estrategia de negocio. Estos son los puntos de partida para que cualquier acción de mercadeo digital",
+          paragraph_5: " sea exitosa y optimice la inversión.",
+          paragraph_6: " Ese certificado, es un programa completo y práctico, que permite entender al consumidor, la industria, la competencia y los retos del negocio propio: para crear e implementar estrategias a la medida, en diferentes plataformas y medios digitales. Por supuesto, monitoreando los resultados para tomar decisiones en tiempo real.",
+        }
+
+
+        const title_1 = <h1>{datos_generales.title_1}</h1>;
+        const subtitle_1 = <h2>{datos_generales.title_2}</h2>;
+        const subtitle_2 = <h3>{datos_generales.title_3}</h3>;
+        const paragraph_datos_generales = <p><em><b>{datos_generales.paragraph_1}</b></em> {datos_generales.paragraph_2} 
+            <b>{datos_generales.paragraph_3}</b> {datos_generales.paragraph_4}<em>{datos_generales.paragraph_5}</em></p>;
+        const subtitle_3= <h3>{android.title_1}</h3>;
+        const paragraph_android= <p>{android.paragraph_1}<em><b>{android.paragraph_2}</b></em>{android.paragraph_3}
+            <b>{android.paragraph_4}</b>{android.paragraph_5}<em>{android.paragraph_6}</em>{android.paragraph_7}
+            <em>{android.paragraph_8}</em>{android.paragraph_9}</p>;
+        const subtitle_4= <h2>{program_nego.title_1}</h2>;
+        const subtitle_5= <h3>{program_nego.title_2}</h3>;
+        const paragraph_program_neg= <p><em><b>{program_nego.paragraph_1}</b></em>{program_nego.paragraph_2}<b>{program_nego.paragraph_3}</b>
+            {program_nego.paragraph_4}<em>{program_nego.paragraph_5}</em>{program_nego.paragraph_6}</p>;
+
+        const element = (
+        <div>
+            {title_1}
+            {subtitle_1}
+            {subtitle_2}
+            {paragraph_datos_generales}
+            {subtitle_3}
+            {paragraph_android}
+            {subtitle_4}
+            {subtitle_5}
+            {paragraph_program_neg}
+
+      </div>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+    </script>
+  </body>
+</html>

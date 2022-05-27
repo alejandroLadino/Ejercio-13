@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Point 10</title>
+    <meta name="author" content="Dylan Arias And Ginna Tangarife">
+    <meta name="keywords" content="html, fundaments, react, babel">
+    <meta name="description" content="Point 10">
+    </head>
+  <body>
+    <div id="root">
+    </div>
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+    const titulos = {
+      title_1: "Recetas.com",
+      title_2: "Nuevas Recetas",
+      title_3: "**Arroz Criollo**",
+      title_4: "Ingredientes",
+      title_5: "Prepación"
+    }
+
+    const parrafos = {
+      paragraph_1: "Recetas Principales",
+      paragraph_2: "Postres Latinos",
+      paragraph_3: "Bienvenido a nuestro sitio web sobre gastronomia latina, te invitamos a preparar nuestras recetas.",
+      paragraph_4: ["Tiempo de preparación:","45 minutos","Número de porciones","4"],
+      paragraph_5: "Esta rica receta fue proporcionada por Maria Paula."
+    }
+
+    const lista_1 = {
+      li_1: ["Salsa de tomate","2 cucharadas de aceite 14gr","1 cebolla larga picada 45gr",
+          "2 diente de ajo finamente picado 3gr","1 pimentón rojo picado en cuadritos 60gr",
+          "1 taza de arroz blanco 225gr","1 taza de maiz desgranado 79gr",
+          "150 gr de pechuga de pollo cocinado y desmechado","Sal a gusto"]
+    }
+
+    const lista_2 = {
+      li_1: ["Calentar en una olla el aceite, sofreir la cebolla junto con el ajo, el pimentón por 3 minutos.",
+          "Adicionar el arroz y continua sofriendo para que se dore.",
+          "Agregar el pollo, el maiz desgranado y las verduras.",
+          "Mezclar todo, rectificar sal y dejar cocinar hasta que seque.",
+          "Bajar el fuego, tapar la olla y continuar la cocción por 25 minutos más."]
+    }
+
+    const subtitle_1 = <h2><img src="./sources/images/recetas.jpeg" title="logo receta"/>{titulos.title_1}</h2>;
+    const menu = <p>
+        <a href="https://www.google.com">{parrafos.paragraph_1}</a> |
+        <a href="https://www.google.com">{parrafos.paragraph_2}</a><br/>
+      </p>;
+    const parrafo_1 = <p>{parrafos.paragraph_3}</p>;
+    const subtitle_2 = <h3>{titulos.title_2}</h3>;
+    const subtitle_3 = <h4>{titulos.title_3}</h4>;
+    const parrafo_2 = <p>{parrafos.paragraph_4[0]}<b> {parrafos.paragraph_4[1]}</b> {parrafos.paragraph_4[2]} <b>{parrafos.paragraph_4[3]}</b></p>;
+    const subtitle_4 = <h4>{titulos.title_4}</h4>;
+    const lista_no_ordenada = <ul><b>
+        <li>{lista_1.li_1[0]}</li>
+        <li>{lista_1.li_1[1]}</li>
+        <li>{lista_1.li_1[2]}</li>
+        <li>{lista_1.li_1[3]}</li>
+        <li>{lista_1.li_1[4]}</li>
+        <li>{lista_1.li_1[5]}</li>
+        <li>{lista_1.li_1[6]}</li>
+        <li>{lista_1.li_1[7]}</li>
+        <li>{lista_1.li_1[8]}</li>
+      </b></ul>
+    const subtitle_5 = <h4>{titulos.title_5}</h4>;
+    const lista_ordenada = <ol>
+        <li>{lista_2.li_1[0]}</li>
+        <li>{lista_2.li_1[1]}</li>
+        <li>{lista_2.li_1[2]}</li>
+        <li>{lista_2.li_1[3]}</li>
+        <li>{lista_2.li_1[4]}</li>
+      </ol>
+    const parraro_3 = <p>{parrafos.paragraph_5}</p>
+
+    const element = (
+      <div>
+        {subtitle_1}
+        {menu}
+        {parrafo_1}
+        {subtitle_2}
+        {subtitle_3}
+        {parrafo_2}
+        {subtitle_4}
+        {lista_no_ordenada}
+        {subtitle_5}
+        {lista_ordenada}
+        {parraro_3}
+      </div>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+    </script>
+  </body>
+</html>

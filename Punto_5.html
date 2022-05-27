@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>Point 5</title>
+        <meta name="author" content="Dylan Arias And Ginna Tangarife">
+        <meta name="keywords" content="html, fundaments, react, label">
+        <meta name="description" content="Point 5">
+        </head>
+      <body>
+        <div id="root">
+        </div>
+    
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+   
+        const datos_generales={
+            title_1: "Página principal de Juan Tuesta",
+            paragraph_1:"Bienvenido a mi página personal. Soy un alumno de la Universidad de Deusto y esta es mi página inicial,con la lista de mis enlaces favoritos y otra información de interés",
+        }
+        const enlaces_fav={
+            title_2: "Enlaces favoritos:",
+            paragraph_1:"Páginas personales",
+            paragraph_2:"Páginas de referencia",
+            paragraph_3:"Portales",
+            paragraph_4:"Publicaciones",
+        }
+        const paginas_per={
+            title_3:"Páginas personales",
+            paragraph_1:"Documentalistas",
+            paragraph_1_1:"Charkes F. Golfard",
+            paragraph_1_2:"Lou Burnard",
+            paragraph_1_3:"Tim Berners-Lee",
+            paragraph_2:"Historiadores",
+            paragraph_3:"Lingüistas",
+            paragraph_4:"Traductores",
+
+        }
+        const paginas_ref={
+            title_4: "Páginas de referencia",
+            paragraph_1:"Bibliotecas universitarias",
+            paragraph_2:"Centros de documentación",
+            paragraph_3:"Museos de arte contemporáneo",
+            paragraph_4:"Medios de comunicación",
+        }
+        const portales={
+            title_5: "Portales",
+            paragraph_1:"Inicia",
+            paragraph_2:"Télepolis",
+            paragraph_3:"Ciudades",
+            paragraph_4:"Terra",
+        }
+        const publicaciones={
+            title_6: "Publicaciones",
+            paragraph_1:"Ciberp@ís",
+            paragraph_2:"Diario Tecnologías de la Información",
+            paragraph_3:"The Standard",
+            paragraph_4:"Infoworld",
+            paragraph_5:"Wired",
+        }
+        const final={
+            paragraph_1:"Juan Tuesta, Universidad de Duesto, marzo 2002."
+        }
+        
+
+        const title_1 = <h1>{datos_generales.title_1}</h1>;
+        const paragraph_datos_generales = <p>{datos_generales.paragraph_1}<br/></p>;
+        const subtitle_1 = <h2>{enlaces_fav.title_2}</h2>;
+        const lista_enlaces_fav= <ol><li><a href="https://www.google.com">{enlaces_fav.paragraph_1}</a></li>
+            <li>{enlaces_fav.paragraph_2}</li><li>{enlaces_fav.paragraph_3}</li><li>{enlaces_fav.paragraph_4}</li></ol>;
+        const title_3=<h2>{paginas_per.title_3}</h2>;
+        const lista_paginas_per=<ol><li>{paginas_per.paragraph_1}</li><ul><li>{paginas_per.paragraph_1_1}</li>
+            <li>{paginas_per.paragraph_1_2}</li><li>{paginas_per.paragraph_1_3}</li></ul><li>{paginas_per.paragraph_2}</li>
+            <li>{paginas_per.paragraph_3}</li><li>{paginas_per.paragraph_4}</li></ol>;
+        const title_4=<h2>{paginas_ref.title_4}</h2>;
+        const lista_paginas_ref= <ol><li>{paginas_ref.paragraph_1}</li><li>{paginas_ref.paragraph_2}</li>
+            <li>{paginas_ref.paragraph_3}</li><li>{paginas_ref.paragraph_4}</li></ol>;
+        const title_5=<h2>{portales.title_5}</h2>;
+        const lista_portales= <ol><li>{portales.paragraph_1}</li><li>{portales.paragraph_2}</li>
+            <li>{portales.paragraph_3}</li><li>{portales.paragraph_4}</li></ol>;
+            const title_6=<h2>{publicaciones.title_6}</h2>;
+        const lista_publicaciones= <ol><li>{publicaciones.paragraph_1}</li><li>{publicaciones.paragraph_2}</li>
+            <li>{publicaciones.paragraph_3}</li><li>{publicaciones.paragraph_4}</li><li>{publicaciones.paragraph_5}</li></ol>;
+        const paragraph_final=<em>{final.paragraph_1}</em>;
+        
+    
+
+    const element = (
+      <div>
+        {title_1}
+        {paragraph_datos_generales}
+        {subtitle_1}
+        {lista_enlaces_fav}
+        <hr/> 
+        {title_3}
+        {lista_paginas_per}
+        <hr/> 
+        {title_4}
+        {lista_paginas_ref}
+        <hr/> 
+        {title_5}
+        {lista_portales}
+        <hr/> 
+        {title_6}
+        {lista_publicaciones}
+        <hr/> 
+        {paragraph_final}
+        
+      </div>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+    </script>
+  </body>
+</html>
+        

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Point 8</title>
+    <meta name="author" content="Dylan Arias And Ginna Tangarife">
+    <meta name="keywords" content="html, fundaments, react, babel">
+    <meta name="description" content="Point 8">
+    </head>
+  <body>
+    <div id="root">
+    </div>
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+    const datos_generales = {
+      title_1: "Tu concierto",
+      paragraph_1: "Bienvenido a este blog de conciertos..."
+    }
+
+    const title_1 = <h1><img src="./sources/images/concert_logo.png"  title="Logo concert" width="20%"/> {datos_generales.title_1}</h1>;
+    const paragraph = <p>{datos_generales.paragraph_1}<br/></p>;
+    const image_concert = <img src="./sources/images/concert.jpeg"  title="Logo concert" width="80%"/>;
+
+    const element = (
+      <div>
+        {title_1}
+        {paragraph}
+        {image_concert}
+      </div>
+    );
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+    </script>
+  </body>
+</html>
